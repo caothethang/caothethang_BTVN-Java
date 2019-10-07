@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Bai7;
+package Bai8;
 
 import java.util.Scanner;
 
@@ -11,12 +11,14 @@ import java.util.Scanner;
  *
  * @author Administrator
  */
-public class Bai7 {
+public class Bai8 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n= sc.nextInt();
-        int m= sc.nextInt();
-        System.out.println("Min là: "+  Math.min(n,m));
-        System.out.println("Max là: " + Math.max(n,m));
+        int a= sc.nextInt();
+        int b= sc.nextInt();
+        int c= sc.nextInt();
+        System.out.println("Min là: "+  Math.min(Math.min(a,b),Math.min(b,c)));
+        System.out.println("Max là: " + Math.max(Math.max(a,b),Math.max(b,c)));
     }
+    
 }
