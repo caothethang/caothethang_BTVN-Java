@@ -11,8 +11,8 @@ import java.util.Scanner;
  * @author Administrator
  */
 public class Bai2 {
- public  static void xuatmang(int[] a){
-    for(int i=0;i<a.length;i++)
+ public  static void xuatmang(int[] a,int n){
+    for(int i=0;i<n;i++)
     {
         System.out.println(a[i]);
     }
@@ -58,7 +58,7 @@ public static int min(int a[],int n){
 }
 public static void chen(int a[],int x,int n){
     if(soHoanHao(x)==1){
-        for(int i=min(a,n);i<n;i++){
+        for(int i=n-1;i>=min(a,n);i--){
             a[i+1]=a[i];
         }
         a[min(a,n)]=x;
@@ -68,7 +68,7 @@ public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         int c=n+1;
-        int[] a=new int[n];
+        int[] a=new int[c];
         System.out.println("Nhap mang:");
         for(int i=0;i<n;i++)
         {
@@ -76,15 +76,15 @@ public static void main(String[] args) {
         }
         sapxep(a,n);
         System.out.println("mang sau khi sap xep");
-        xuatmang(a);
+        xuatmang(a,n);
         System.out.println("Nhap so x");
         int x=sc.nextInt();
         if(soHoanHao(x)==0){
             System.out.println("Khong phai so hoan hao");
         }
         if(soHoanHao(x)==1) {
-            chen(a,x,c);
-            xuatmang(a);
+            chen(a,x,n);
+            xuatmang(a,a.length);
         }
     }
 }

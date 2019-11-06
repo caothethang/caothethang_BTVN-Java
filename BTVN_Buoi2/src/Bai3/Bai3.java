@@ -94,7 +94,7 @@ public class Bai3 {
                 System.out.println("Nhap mang");
                 nhap(n);
                 xoa(a,n);
-            xuat(a,n-1);
+            xuat(a,a.length);
             break;
             case 5:
                 System.out.println("Nhap mang");
