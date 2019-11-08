@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Person;
+package Bai4;
+
 
 import java.util.Scanner;
 
@@ -11,8 +12,8 @@ import java.util.Scanner;
  *
  * @author Administrator
  */
-public class MemberHit {
-    private String name;
+public class BattleField {
+      private String name;
 
     public String getName() {
         return name;
@@ -44,7 +45,7 @@ public class MemberHit {
         System.out.println("HP: "+HP);
         System.out.println("Sat thuong: "+Damage);
     }
-    public void Attack(MemberHit P1){
+    public void Attack(BattleField P1){
         P1.setHP(P1.getHP()-this.getDamage());
     }
 }

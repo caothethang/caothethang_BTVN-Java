@@ -3,35 +3,34 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package RunMain;
+package Bai4;
 
-import Person.MemberHit;
+import Bai4.BattleField;
 
 /**
  *
  * @author Administrator
  */
 public class Main {
-    public static void main(String[] args) {
-        MemberHit P1=new MemberHit();
-        MemberHit P2=new MemberHit();
+       public static void main(String[] args) {
+        BattleField P1=new BattleField();
+        BattleField P2=new BattleField();
         System.out.println("Thong tin P1:");
         P1.Input();
         P1.Output();
         System.out.println("Thong tin P2");
         P2.Input();
         P2.Output();
-        for(int i=0;i<4;i++)
-        {
+        do{
             P1.Attack(P2);
-            P2.Output();
-        }
-        for(int i=0;i<5;i++)
-        {
             P2.Attack(P1);
             P1.Output();
+            P2.Output();
+              if(P1.getHP()<=0) System.out.println(P1.getName()+" THUA");
+            else System.out.println(P2.getName()+" THUA");
         }
-        if(P1.getHP()>P2.getHP()) System.out.println(P1.getName()+" thang");
-        else System.out.println(P2.getName()+" thang");
+        while(P1.getHP()>0 && P2.getHP()>0);
+       
     }
+    
 }
