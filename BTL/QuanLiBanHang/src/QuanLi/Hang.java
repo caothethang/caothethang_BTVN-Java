@@ -10,10 +10,9 @@ package QuanLi;
  * @author Cao The Thang
  */
 public class Hang {
+
     private String ID;
     private String Name;
-
-  
     private String LoaiHang;
     private long Gia;
     private String NgayDang;
@@ -29,17 +28,20 @@ public class Hang {
     }
 
     public Hang() {
-    }    
+    }
+
     public String getID() {
         return ID;
     }
-      public String getLoaiHang() {
+
+    public String getLoaiHang() {
         return LoaiHang;
     }
 
     public void setLoaiHang(String LoaiHang) {
         this.LoaiHang = LoaiHang;
     }
+
     public void setID(String ID) {
         this.ID = ID;
     }
@@ -75,8 +77,8 @@ public class Hang {
     public void setSoLuong(int SoLuong) {
         this.SoLuong = SoLuong;
     }
-    public void HienThiThongTin()
-    {
-        System.out.println("ID: "+ID + " Ten: "+Name +" Gia: "+Gia+" Ngày đăng: "+NgayDang+" SoLuong: "+SoLuong);
+
+    public void HienThiThongTin() {
+        System.out.println("ID: " + ID + " Ten: " + Name + " Gia: " + Gia + "  Loại hàng: " + LoaiHang + " Ngày đăng: " + NgayDang + " SoLuong: " + SoLuong);
     }
 }
