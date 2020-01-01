@@ -79,6 +79,7 @@ public class Hang {
     }
 
     public void HienThiThongTin() {
-        System.out.println("ID: " + ID + " Ten: " + Name + " Gia: " + Gia + "  Loại hàng: " + LoaiHang + " Ngày đăng: " + NgayDang + " SoLuong: " + SoLuong);
+        System.out.println("ID: " + ID + " Ten: " + Name + " Gia: " + Gia + "  Loại hàng: " + LoaiHang + " Ngày đăng: " + NgayDang + " Số lượng còn lại: " + SoLuong);
     }
+    
 }

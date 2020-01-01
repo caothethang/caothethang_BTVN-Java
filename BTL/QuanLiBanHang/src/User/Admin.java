@@ -43,13 +43,20 @@ public class Admin {
     public void Search() {
         int choose;
         do {
+            System.out.println("--------------------------------");
             System.out.println("1.Tìm kiếm theo ID: ");
+            System.out.println("--------------------------------");
             System.out.println("2.Tìm kiếm theo từ khóa: ");
+            System.out.println("--------------------------------");
             System.out.println("3.Tìm kiếm theo giá: ");
+            System.out.println("--------------------------------");
             System.out.println("4.Tìm kiếm theo ngày đăng: ");
+            System.out.println("--------------------------------");
             System.out.println("5.Tìm kiếm theo loại hàng: ");
+            System.out.println("--------------------------------");
             System.out.println("6.Thoát tìm kiếm.");
-            System.out.println("                                                                       ");
+            System.out.println("--------------------------------");
+            
             System.out.print("Your selection: ");
             choose = sc.nextInt();
             sc.nextLine();
@@ -99,20 +106,26 @@ public class Admin {
                 }
             }
             if (CHECK == true) {
+                System.out.println("--------------------------------");
                 System.out.println("Nhập tên cho sản phẩm mới: ");
                 a.setName(sc.nextLine());
                 System.out.println("Nhập loại hàng cho sản phẩm mới: ");
+                System.out.println("--------------------------------");
                 a.setLoaiHang(sc.nextLine());
                 System.out.println("Nhập giá cho sản phẩm mới: ");
+                System.out.println("--------------------------------");
                 a.setGia(sc.nextLong());
                 sc.nextLine();
                 System.out.println("Nhập số lượng cho sản phẩm mới: ");
+                System.out.println("--------------------------------");
                 a.setSoLuong(sc.nextInt());
                 sc.nextLine();
                 System.out.println("Nhập ngày đăng cho sản phẩm: ");
+                System.out.println("--------------------------------");
                 a.setNgayDang(sc.nextLine());
                 List.Add(a);
             } else {
+                System.out.println("--------------------------------");
                 System.out.println("Đã tồn tại ID này, yêu cầu nhập ID mới: ");
             }
         } while (CHECK == false);
@@ -120,18 +133,28 @@ public class Admin {
     }
 
     public void ChangeInfor() {
+        System.out.println("--------------------------------");
         System.out.println("Nhập ID :");
         String id = sc.nextLine();
         System.out.println("Nhập lựa chọn: ");
+        System.out.println("--------------------------------");
         int choose;
         do {
+            System.out.println("--------------------------------");
             System.out.println("1.Thay đổi ID: ");
+            System.out.println("--------------------------------");
             System.out.println("2.Thay đổi tên hàng: ");
+            System.out.println("--------------------------------");
             System.out.println("3.Thay đổi loại hàng: ");
+            System.out.println("--------------------------------");
             System.out.println("4.Thay đổi giá: ");
+            System.out.println("--------------------------------");
             System.out.println("5.Thay đổi ngày đăng: ");
+            System.out.println("--------------------------------");
             System.out.println("6.Thay đổi số lượng: ");
+            System.out.println("--------------------------------");
             System.out.println("7.Thoát: ");
+            System.out.println("--------------------------------");
             System.out.println("                                                                       ");
             System.out.println("-------------Lựa chọn của bạn:--------------------");
             System.out.print("Your selection: ");
@@ -142,26 +165,32 @@ public class Admin {
                 case 1:
                     System.out.println("Thay đổi ID thành: ");
                     ListSP.SearchByIDs(id).setID(sc.nextLine());
+                    System.out.println("--------------------------------");
                     break;
                 case 2:
                     System.out.println("Thay đổi tên hàng thành: ");
                     ListSP.SearchByIDs(id).setName(sc.nextLine());
+                    System.out.println("--------------------------------");
                     break;
                 case 3:
                     System.out.println("Thay đổi loại hàng thành: ");
                     ListSP.SearchByIDs(id).setLoaiHang(sc.nextLine());
+                    System.out.println("--------------------------------");
                     break;
                 case 4:
                     System.out.println("Thay đổi giá thành: ");
                     ListSP.SearchByIDs(id).setGia(sc.nextLong());
+                    System.out.println("--------------------------------");
                     break;
                 case 5:
                     System.out.println("Thay đổi ngày đăng thành: ");
                     ListSP.SearchByIDs(id).setNgayDang(sc.nextLine());
+                    System.out.println("--------------------------------");
                     break;
                 case 6:
                     System.out.println("Thay đổi số lượng thành: ");
                     ListSP.SearchByIDs(id).setSoLuong(sc.nextInt());
+                    System.out.println("--------------------------------");
                     break;
                 case 7:
                     System.out.println("Thoát:");

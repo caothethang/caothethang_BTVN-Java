@@ -8,6 +8,7 @@ package RunMain;
 import User.Admin;
 import QuanLi.DanhSach;
 import QuanLi.Hang;
+import User.KhachHang;
 import java.util.Scanner;
 
 /**
@@ -35,30 +36,38 @@ public class RunMain {
         ShopVip.Add(hang5);
         System.out.println("Nhập tài khoản: ");
         String taikhoan = sc.nextLine();
+        System.out.println("--------------------------------");
         System.out.println("Nhập mật khẩu:");
+        System.out.println("--------------------------------");
         String matkhau = sc.nextLine();
         if (taikhoan.compareTo("admin") == 0 && matkhau.compareTo("admin") == 0) {
             thang.add(ShopVip);
 
             System.out.println("---------------Đây là giao diện và chức năng của admin----------------");
-            System.out.println("                                                                       ");
+            System.out.println("--------------------------------");
             int choose;
             do {
                 thang.AutoXoa();
                 System.out.println("---------------Lựa chọn của bạn------------------");
-                System.out.println("                                                                       ");
+                System.out.println("--------------------------------");
                 System.out.println("1.Hiển thị toàn bộ sản phẩm: ");
+                System.out.println("--------------------------------");
                 System.out.println("2.Tìm kiếm sản phẩm: ");
+                System.out.println("--------------------------------");
                 System.out.println("3.Thêm sản phẩm:  ");
+                System.out.println("--------------------------------");
                 System.out.println("4.Xóa sản phẩm: ");
+                System.out.println("--------------------------------");
                 System.out.println("5.Chỉnh sửa sản phẩm: ");
+                System.out.println("--------------------------------");
                 System.out.println("6.In hóa đơn: ");
+                System.out.println("--------------------------------");
                 System.out.println("7.Thoát:  ");
-                System.out.println("                                                                       ");
+                System.out.println("--------------------------------");
                 System.out.print("Your selection: ");
                 choose = sc.nextInt();
                 sc.nextLine();
-                System.out.println("");
+                System.out.println("--------------------------------");
                 switch (choose) {
                     case 1:
                         thang.Show();
@@ -78,6 +87,48 @@ public class RunMain {
 
                 }
             } while (choose != 7);
+        }
+
+        KhachHang thangdeptrai = new KhachHang("thang", 1000);
+        if (taikhoan.compareTo("admin") != 0) {
+            System.out.println("---------------Đây là giao diện và chức năng của khách hàng----------------");
+            System.out.println("--------------------------------");
+            thangdeptrai.add(ShopVip);
+            int choose;
+            do {
+                thangdeptrai.AutoXoa();
+                System.out.println("--------------------------------");
+                System.out.println("1.Xem các mặt hàng: ");
+                System.out.println("--------------------------------");
+                System.out.println("2.Tìm kiếm hàng: ");
+                System.out.println("--------------------------------");
+                System.out.println("3.Mua hàng ");
+                System.out.println("--------------------------------");
+                System.out.println("4.In hóa đơn ");
+                System.out.println("--------------------------------");
+                System.out.println("5.Thoát.");
+                System.out.println("--------------------------------");
+
+                System.out.println("Your selection: ");
+                choose = sc.nextInt();
+                sc.nextLine();
+                switch (choose) {
+                    case 1:
+                        thangdeptrai.Show();
+                        break;
+                    case 2:
+                        thangdeptrai.Search();
+                        break;
+                    case 3:
+                        thangdeptrai.MuaHang();
+                        break;
+                    case 4:
+                        thangdeptrai.HoaDon();
+                        break;
+                    case 5:
+                        break;
+                }
+            } while (choose != 5);
         }
     }
 
